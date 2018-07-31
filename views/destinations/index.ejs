@@ -1,0 +1,30 @@
+<% include ../partials/header.ejs %>
+
+  <div class="destNav">
+    <a href="/"> Home </a>
+    <a href="/posts"> Articles </a>
+  </div>
+
+  <article>
+
+    <% let i = 1 %>
+
+    <% destinations.forEach(destination => { %>
+
+      <main class="destPage">
+        <p id="destArt"> Article <%= i %> </p>
+
+        <div> <%= destination.continent %>
+          <br>
+          <%= destination.city %> <%= destination.country %>
+        </div>
+           
+      </main>
+
+      <% i++ %>
+
+    <% }) %>
+
+  </article>
+
+<% include ../partials/footer.ejs %>

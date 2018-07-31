@@ -1,0 +1,75 @@
+<% include ../partials/header.ejs %>
+
+  <div class="destNav">
+    <a href="/"> Home </a>
+    <a href="/posts"> Articles </a>
+    <a href="/destinations"> Destinations </a>
+  </div>
+
+  <br>
+
+  <article>
+
+    <p class="add-space"> </p>
+
+    <div id="background-color" >
+      <img src=<%= posts.image %> >
+      <div> <%= posts.article %> </div>
+    </div>
+
+    <br>
+    <br>
+
+    <form action="/posts/<%= posts.id %>?_method=PUT" method="POST">
+
+      <label> Add the Continent </label>
+
+      <select name="continent">
+        <option value="North_America">North America</option>
+        <option value="South_America">South America</option>
+        <option value="Africa">Africa</option>
+        <option value="Europe">Europe</option>
+        <option value="Asia">Asia</option>
+        <option value="Astralia">Astralia</option>
+        <option value="Antarctica">Antarctica</option>
+      </select>
+
+      <br>
+      <br>
+
+      <label> Add the Country </label>
+
+      <input name="country" type="text" placeholder="Add the Country" />
+
+      <br>
+
+      <label> Add the City </label>
+      <input name="city" type="text" placeholder="Add the City" />
+
+      <br>
+      <br>
+
+      <label> Edit This Aricle </label>
+      <br>
+      <textarea name="article" rows="8" cols="80"> <%= posts.article %> </textarea>
+      <br>
+      <label> Edit This Image URL </label>
+      <input class="display-inline" name="image" type="text" value="<%= posts.image %>" />
+
+      <button type="submit" class="edit-button">Update</button>
+
+    </form>
+
+    <br>
+    <br>
+
+    <form method="POST" action="/posts/<%= posts.id %>?_method=DELETE">
+        <button type="Submit" id="delete-button">DELETE </button>
+    </form>
+
+    <br>
+    <br>
+
+  </article>
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,251 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+header{
+  position: relative;
+  bottom: 30px;
+  background-color: #264653;
+  height: 100px;
+}
+
+#header-name{
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 20px;
+  font-size: 30px;
+}
+
+nav{
+  margin: 10px 0px;
+}
+
+.homeNav{
+  padding: 5px 0 5px 35px;
+  background-color: #E9C46A;
+  position: relative;
+  bottom: 40px;
+}
+
+a{
+  text-decoration: none;
+  padding: 300px 10px;
+  color: white;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+main{
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+article{
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.8px;
+  line-height: 24px;
+}
+
+img{
+  height: 300px;
+  width: 500px;
+  float: right;
+  /* need to fix this float with flexbox */
+  padding: 10px 0px 10px 15px;
+}
+
+#space-between-articles{
+  margin: 100px 100px;
+}
+
+.edit-button{
+  background-color: green;
+  color: white;
+  font-size: 13px;
+  height: 30px;
+  width: 60px;
+  border-radius: 3px;
+}
+
+/* starting code for show */
+
+textarea{
+  margin: 5px 0 10px;
+  border: 2px solid  green;
+  border-radius: 4px;
+  padding: 5px;
+  min-width: 300px;
+  min-height: 200px;
+}
+
+form{
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.add-space{
+  margin-top: 20px;
+}
+
+input{
+  min-width: 350px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid  green;
+}
+
+#background-color{
+  background-color: #2A9D8F;
+  min-height: 350px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+}
+
+#delete-button{
+  background-color: red;
+  color: white;
+  font-size: 13px;
+  height: 30px;
+  width: 62px;
+  border-radius: 3px;
+}
+
+/* Starting destination page bellow */
+
+.destPage{
+  background-color: #2A9D8F;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 7px;
+  border: 2px solid #264653;
+  max-width: 600px;
+  color: white;
+}
+
+.destNav{
+  background-color: #E9C46A;
+  height: 30px;
+  width: 100%;
+  padding:  20px 0 0 15px;
+}
+.home-backgound{
+  font-family: 'Open Sans', sans-serif;
+  line-height: 23px;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #264653;
+  height: 40px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  padding: 10px 30px;
+}
+
+@media(max-width: 1015px){
+  article{
+    max-width: 600px;
+  }
+  img{
+    height: 300px;
+    width: 600px;
+    position: relative;
+    bottom: 10px;
+    left: 15px;
+    padding: 0px 0px 0px 15px;
+    margin-bottom: 20px;
+  }
+  textarea{
+    max-width: 500px;
+    margin: 5px 0 10px;
+    padding: 5px;
+    min-width: 100px;
+    min-height: 150px;
+  }
+  form{
+    max-width: 500px;
+  }
+  input{
+    min-width: 150px;
+    height: 20px;
+  }
+  .edit-button{
+    font-size: 12px;
+    height: 25px;
+    width: 55px;
+  }
+  .home-backgound{
+    max-width: 600px;
+  }
+}
+
+@media(max-width: 680px){
+  article{
+    max-width: 400px;
+    color: white;
+    font-weight: 300;
+  }
+  img{
+    height: 200px;
+    width: 400px;
+  }
+  textarea{
+
+    max-width: 400px;
+  }
+  form{
+    max-width: 500px;
+  }
+  .home-backgound{
+    max-width: 400px;
+  }
+  label{
+    color: black;
+    display: block;
+  }
+  input{
+    display: block;
+    margin: 0 auto;
+  }
+  .display-inline{
+    display: inline;
+  }
+    footer{
+    position: relative;
+    bottom: 0;
+  }
+}
+
+@media(max-width: 460px){
+  article{
+    max-width: 300px;
+  }
+  img{
+    width: 300px;
+  }
+  textarea{
+    max-width: 300px;
+    max-height: 50px;
+  }
+  form{
+    max-width: 500px;
+  }
+  .home-backgound{
+    max-width: 300px;
+  }
+  .destNav{
+    height: 30px;
+    padding: 15px 0 0px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,53 @@
+<% include ../partials/header.ejs %>
+
+  <div class="destNav">
+    <a href="/"> Home </a>
+    <a href="/destinations"> Destinations </a>
+  </div>
+
+  <br>
+
+  <article>
+
+
+    <% posts.forEach(post => { %>
+
+      <div id="background-color">
+        <img src=<%= post.image %>>
+
+        <br>
+
+        <div> <%= post.article %> </div>
+
+        <br>
+
+        <a href="/posts/<%= post.id %>" id="move-the-post-tags"> Edit This Post </a>
+      </div>
+
+        <br>
+
+    <% }) %>
+
+    <br>
+
+    <form action="/posts" method="POST">
+
+      <label> Write an Article </label>
+      <br>
+      <textarea name="article" rows="8" cols="80" placeholder="Write an about a place you've visited"></textarea>
+
+      <br>
+
+      <label> Add an Image </label>
+      <input class="display-inline name="image" placeholder="Enter an image URL"></input>
+
+      <button type="submit" id="submit-size" class="edit-button"> Submit </button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+  </article>
+
+<% include ../partials/footer.ejs %>
